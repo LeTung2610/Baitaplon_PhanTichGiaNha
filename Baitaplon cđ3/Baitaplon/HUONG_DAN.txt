@@ -1,0 +1,24 @@
+PHÂN TÍCH GIÁ BẤT ĐỘNG SẢN
+
+Giải nén toàn bộ thư mục Baitaplon trước khi chạy.
+Cài thư viện: python -m pip install -r requirements.txt
+Mở giao diện: python app.py (hoặc Run app.py trong PyCharm).
+
+Giao diện:
+- Kết quả mô hình: bảng MAE, RMSE, MAPE, R² và nhận xét.
+- Biểu đồ Part 3: tự nạp 5 hình bieu_do_*.png trong Anh, chọn hình bằng danh sách phía trên.
+- Biểu đồ mô hình: 8 hình so sánh, phần dư, sai số và đặc trưng.
+- Dữ liệu và EDA: kết quả chạy Part 1 và Part 2.
+- Nhật ký chạy: kết quả chi tiết và lỗi nếu có.
+
+Ảnh tự co theo cửa sổ. Bấm Xem ảnh lớn để xem bản gốc có thanh cuộn.
+Bấm Tải lại kết quả nếu ảnh được tạo từ một lần chạy bên ngoài app.
+Nút Chạy toàn bộ quy trình thực hiện Part 1 đến Part 5 theo thứ tự.
+Biểu đồ được lưu tự động; không cần đóng các cửa sổ Matplotlib.
+
+Thư mục Anh chứa 5 hình Part 3 và 8 hình Part 4.
+Bốn hình đưa vào báo cáo cũng có trong results_modeling/charts.
+Bảng model_comparison.csv và model_predictions.csv được cập nhật khi chạy Part 4.
+results_modeling chứa chỉ số, mô hình đã lưu, kiểm định và phân tích sai số.
+MAE/RMSE trên giao diện được quy đổi sang tỷ đồng; CSV gốc vẫn dùng VND.
+Các dấu gán và so sánh trong Python được giữ nguyên để bảo đảm chương trình hoạt động.

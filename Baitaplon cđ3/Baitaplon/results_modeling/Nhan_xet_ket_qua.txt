@@ -1,0 +1,14 @@
+KẾT QUẢ RANDOM FOREST
+Dữ liệu hợp lệ: 2996; train: 2396; test: 600.
+MAE kiểm định chéo theo thời gian tốt nhất: 12.552 tỷ đồng.
+Cấu hình được chọn: {'model__max_depth': 12, 'model__min_samples_leaf': 3}; 150 cây, max_features=0.8, bootstrap=True, squared_error.
+Tập kiểm tra: MAE = 10.180 tỷ; RMSE = 25.281 tỷ; MAPE = 365.59%; R² = 0.0201.
+Mốc dự báo trung vị từ train: MAE = 10.583 tỷ; RMSE = 26.581 tỷ.
+MAPE có thể rất lớn khi giá thực tế nhỏ; không diễn giải 100% − MAPE thành độ chính xác.
+RMSE phạt mạnh các sai số lớn. Xem top20_errors.csv và errors_by_price_band.csv để phân tích.
+Feature Importance là mức tăng MAE khi xáo trộn từng biến trên test, không phải quan hệ nhân quả hay phần trăm ảnh hưởng tới giá. Các biến tương quan có thể chia sẻ thông tin. Không dùng kết quả test này để chọn lại cấu hình.
+Train/test cùng nằm trong tháng 6/2025; đánh giá đoạn cuối sau đoạn đầu, chưa kiểm chứng khả năng dự báo các tháng sau hay giá giao dịch thực tế. Không tự xóa giá ngoại lai để làm đẹp kết quả.
+Dùng nguyên CSV sạch của nhóm. Median đã được tính trước khi chia tập: đây là hạn chế rò rỉ tiền xử lý chung của cả hai mô hình. Muốn khắc phục cần sửa phần chuẩn bị chung cho cả hai, không chỉ Random Forest.
+
+Linear Regression trên cùng test: MAE = 12.422 tỷ; RMSE = 24.537 tỷ; MAPE = 378.02%; R² = 0.0770.
+Xem model_comparison.csv; không sử dụng các chỉ số của bản chia ngẫu nhiên cũ để so sánh.
